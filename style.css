@@ -1,17 +1,14 @@
-body {
+body,
+.container {
     font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    padding: 0px;
+    margin: auto;
     background-color: lightgray;
-    box-sizing: border-box;
-    max-width: 1000px;
+    max-width: 950px;
 }
 
-* {
+*, 
+*:before, 
+*:after {
     box-sizing: border-box;
 }
 
@@ -20,47 +17,80 @@ body {
     background-color: #1F2937;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 1000px;
-    padding: 14px 10px;
 }
+
+.header {
+    padding: 14px 50px 0 50px;
+    justify-content: space-between; 
+}
+
+.footer {
+    color: white;
+    justify-content: center;
+    padding: 8px;
+}
+
+.header
 .name {
     font-weight: 600;
     font-size: large;
     color: white;
 }
 
-.list {
+.list ul{
     list-style: none;
     display: flex;
     gap: 12px
 }
 
+.headshot {
+    display: flex;
+    width: 250px;
+    height: auto;
+    padding-bottom: 10px;
+    flex-shrink: 1;
+}
+
 .maincontent {
     display: flex;
     flex-direction: column;
-    width: 1000px;
-    /* width:100vw; */
+    flex: auto;
 }
 
+.sectionone,
+.sectiontwo,
+.sectionfour,
+.intro {
+    display: flex;
+}
 .sectionone {
     background-color: #1F2937;
-    display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.intro {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+    padding: 14px 0px;
+    gap: 8px;
 }
 
 .sectiontwo{
-    display: flex;
     justify-content: space-around;
     flex-direction: column;
     background-color: white;
-    padding: 20px 20px 40px 20px;
+    padding: 20px 15px 40px 15px;
     gap: 20px;
 }
 .hobbies {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .info {
     display: flex;
@@ -69,6 +99,7 @@ body {
     align-items: center;
     width: 225px;
 }
+
 .text {
     font-size: 12pt;
     font-weight: 300;
@@ -78,35 +109,23 @@ body {
 
 .sectionthree,
 .quote {
-    padding: 50px;
+    padding: 40px 60px;
     font-size: 26px;
     font-weight: 100;
     font-style: italic;
     color:  #1F2937;
-
 }
 
 .sectionfour{
     background-color: white;
     padding: 30px;
-    display: flex;
     justify-content: space-around;
-}
-
-.intro {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    color: white;
-    padding: 14px 14px;
-    gap: 8px;
 }
 
 .action {
     border-radius: 25px;
     background-color: #3882F6;
-    width: 600px;
+    width: 800px;
     padding: 25px;
     display: flex;
     justify-content: space-around;
@@ -131,25 +150,18 @@ font-size: 14pt
 button.buttonone,
 .buttontwo {
     border-radius: 10px;
+    border: white solid 2px;
     color: white;
     padding: 12px;
     margin: auto;
     background-color: #3882F6;
 }
 
-.headshot {
-    width: 250px;
-    height: auto;
-    padding: 8px;
-    flex-shrink: 1;
-}
-
 .meet {
     width: 300px;
 }
-.footer {
-    color: white;
-    justify-content: center;
+.email {
+    align-self: center;
 }
 
 a {
@@ -157,8 +169,11 @@ a {
     color:lightslategray;
 }
 
+.texttwo a,
+.texttwo {
+    color: white;
+}
 .texttwo a{
-    color: black;
     text-decoration: underline;
 }
 
@@ -166,12 +181,12 @@ img {
     width: 165px;
     height: auto;
     border-radius: 15px;
+    border: blue solid 2px;
 }
 
 img.headshott {
-    width: 250px;
+    width: 230px;
     height: auto;
     flex: 1;
     border-radius: 20px;
 }
-
